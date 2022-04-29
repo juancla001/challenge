@@ -37,7 +37,7 @@ const Header = () => {
 
     return (
         <>
-            <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
