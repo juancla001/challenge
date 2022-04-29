@@ -41,8 +41,10 @@ const Login = () => {
         axios
             .post('http://challenge-react.alkemy.org', { email, password })
             .then(res => {
-                swAlert(<h2>Ingresaste correctamente</h2>)
-                //console.log(res.data);
+                swAlert({
+                    icon: "success",
+                    closeOnEsc: true,
+                  });
                 const tokenRes = res.data.token;
                 sessionStorage.setItem('token', tokenRes);
                 navigate('/listado');

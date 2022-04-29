@@ -5,7 +5,19 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
+    let ubicacionPrincipal = window.pageYOffset;
+    window.onscroll = function () {
+        let Desplazamiento_principal = window.pageYOffset;
+        if (ubicacionPrincipal >= Desplazamiento_principal) {
+            document.getElementById('navBar').style.top = '0';
+        }
+        else {
+            document.getElementById('navBar').style.top = '-100px';
+        }
+        ubicacionPrincipal = Desplazamiento_principal;
+    }
     const navigate = useNavigate([]);
+
 
     const submitHandler = e => {
         e.preventDefault();
@@ -25,7 +37,7 @@ const Header = () => {
 
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
