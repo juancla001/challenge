@@ -1,0 +1,9 @@
+.card-group{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 15rem;
+    border: 0px;
+    padding: 5px;
+}
