@@ -9,13 +9,19 @@ import Header from './components/Header'
 //import Footer from './components/Footer'
 
 function App() {
+  let addOrRemoveFavs = ()=> {
+    console.log("ok funciona");
+    
+  }
   return (
     <>
+
       <Header />
+      
       <div className='container mt-3'>
         <Routes>
           <Route exact path="/*" element={<Login />} />
-          <Route exact path="/" element={<Listado />} />
+          <Route exact path="/" element={<Listado render={(props) =>  addOrRemoveFavs={addOrRemoveFavs}} /> } />
           <Route path="/detail" element={<Detail />} />
           <Route path="/result" element={<Result />} />
 

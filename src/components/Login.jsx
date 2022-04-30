@@ -57,7 +57,7 @@ const Login = () => {
             {token && <Navigate replace to="/" />}
             <div className="row" >
                 <div className="col-6 offset-3">
-                    <h2>Logearse</h2>
+                    <h2>Ingresar</h2>
                     <form onSubmit={submitHandler}>
                         <label htmlFor="">
                             <input type="text" name="email" placeholder="Email" />

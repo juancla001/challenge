@@ -1,6 +1,9 @@
 login_ user challenge@alkemy.org pass: react
 
 # Getting Started with Create React App
+login_ user challenge@alkemy.org pass: react
+no olvides: npm install
+en caso de error proba:  npm install --force
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

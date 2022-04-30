@@ -8,8 +8,9 @@ import { Navigate } from 'react-router-dom';
 
 
 
-const Listado = () => {
-
+const Listado = (props) => {
+    console.log(props);
+    
     let token = sessionStorage.getItem('token');
 
     const [movieList, setMovieList] = useState([]);
@@ -39,6 +40,7 @@ const Listado = () => {
                             <div className="col-3" key={index}>
                                 <div className="card my-3">
                                     <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top" alt="..." />
+                                    <button className="favouriteBtn">🖤</button>
                                     <div className="card-body">
                                         <h5 className="card-title">
                                             {oneMovie.title}
