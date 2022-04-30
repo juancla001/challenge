@@ -5,7 +5,6 @@ import Login from './components/Login'
 import Listado from './components/Listado'
 import Detail from './components/Detail'
 import Result from './components/Result'
-
 import Header from './components/Header'
 //import Footer from './components/Footer'
 
@@ -21,6 +20,7 @@ function App() {
           <Route path="/result" element={<Result />} />
 
         </Routes>
+
       </div>
     </>
   );

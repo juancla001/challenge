@@ -9,7 +9,7 @@ const Footer = () => {
                     <ul>
                         <li>
                             <a href="instagram.com" rel='noopener noreferrer'>
-                                IG
+                                JuanM. Clavijo
                             </a>
                         </li>
                     </ul>
