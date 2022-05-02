@@ -47,7 +47,7 @@ const Login = () => {
                   });
                 const tokenRes = res.data.token;
                 sessionStorage.setItem('token', tokenRes);
-                navigate('/listado');
+                navigate('/list');
             }, [])
     }
     let token = sessionStorage.getItem('token');
@@ -57,7 +57,7 @@ const Login = () => {
             {token && <Navigate replace to="/" />}
             <div className="row" >
                 <div className="col-6 offset-3">
-                    <h2>Ingresar</h2>
+                    <h2>Login</h2>
                     <form onSubmit={submitHandler}>
                         <label htmlFor="">
                             <input type="text" name="email" placeholder="Email" />
@@ -68,6 +68,7 @@ const Login = () => {
                             <br />
                         </label>
                         <button type="submit" name="login">Login</button>
+                        {/*add register*/}
                     </form>
                 </div>
             </div>

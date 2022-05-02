@@ -18,7 +18,7 @@ const Result = () => {
                 setMovieResult(movieArray);
             })
             .catch(err => console.log(err));
-            
+
     })
 
     return (

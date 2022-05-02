@@ -1,11 +1,12 @@
 .App {
   text-align: center;
 }
-body{
+
+body {
   font-family: sans-serif;
 }
 
-.favouriteBtn{
+.favouriteBtn {
   width: 30px;
   height: 30px;
   background-color: aliceblue;

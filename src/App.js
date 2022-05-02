@@ -2,7 +2,7 @@ import './css/app.css'
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Login from './components/Login'
-import Listado from './components/Listado'
+import List from './components/List'
 import Detail from './components/Detail'
 import Result from './components/Result'
 import Header from './components/Header'
@@ -21,7 +21,7 @@ function App() {
       <div className='container mt-3'>
         <Routes>
           <Route exact path="/*" element={<Login />} />
-          <Route exact path="/" element={<Listado render={(props) =>  addOrRemoveFavs={addOrRemoveFavs}} /> } />
+          <Route exact path="/" element={<List render={(props) =>  addOrRemoveFavs={addOrRemoveFavs}} /> } />
           <Route path="/detail" element={<Detail />} />
           <Route path="/result" element={<Result />} />
 

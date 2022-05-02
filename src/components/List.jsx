@@ -1,4 +1,4 @@
-import '../css/Listado.css'
+import '../css/List.css'
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -8,13 +8,13 @@ import { Navigate } from 'react-router-dom';
 
 
 
-const Listado = (props) => {
+const List = (props) => {
     console.log(props);
-    
+
     let token = sessionStorage.getItem('token');
 
     const [movieList, setMovieList] = useState([]);
-    
+
 
     useEffect(() => {
         const endPoint = 'https://api.themoviedb.org/3/discover/movie?api_key=07de9387a9d5a1772b767076d3f3d757&language=es-US&page=1';
@@ -28,7 +28,7 @@ const Listado = (props) => {
             })
     }, [setMovieList]);
 
-    //console.log(movieList);
+
 
     return (
         <>
@@ -60,4 +60,4 @@ const Listado = (props) => {
 
 }
 
-export default Listado;
+export default List;
