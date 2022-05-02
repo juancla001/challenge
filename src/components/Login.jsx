@@ -67,7 +67,7 @@ const Login = () => {
                             <input type="password" name="password" placeholder="Password" />
                             <br />
                         </label>
-                        <button type="submit" name="login">Login</button>
+                        <button type="submit" name="login">Sign in</button>
                         {/*add register*/}
                     </form>
                 </div>
