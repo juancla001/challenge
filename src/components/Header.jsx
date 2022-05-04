@@ -37,26 +37,26 @@ const Header = () => {
 
     return (
         <>
-            <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
+            <nav id="navBar" className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/*">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/listado">List</Link>
+                                <Link className="nav-link" to="/listado">List</Link>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/contacto" tabindex="-1">Contact</Link>
                             </li>
                         </ul>
-                        <form class="d-flex" onSubmit={submitHandler}>
-                            <input class="form-control me-2" type="search" placeholder="Search..." name="keyword" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        <form className="d-flex" onSubmit={submitHandler}>
+                            <input className="form-control me-2" type="search" placeholder="Search..." name="keyword" aria-label="Search" />
+                            <button className="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
