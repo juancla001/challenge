@@ -50,9 +50,6 @@ const Header = () => {
                             <li class="nav-item">
                                 <Link className="nav-link" to="/listado">List</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contacto" tabindex="-1">Contact</Link>
-                            </li>
                         </ul>
                         <form className="d-flex" onSubmit={submitHandler}>
                             <input className="form-control me-2" type="search" placeholder="Search..." name="keyword" aria-label="Search" />
