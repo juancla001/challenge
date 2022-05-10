@@ -29,8 +29,20 @@ const List = (props) => {
             imgUrl, titleMovie, overviewMovie,
             id: btn.dataset.movieId
         }
-        tempMoviesInFavs.push(movieData);
-        console.log(tempMoviesInFavs)
+        let movieIsInArray = tempMoviesInFavs.find(oneMovie => {
+            return oneMovie.id === movieData.id
+        })
+        if (!movieIsInArray) {
+            tempMoviesInFavs.push(movieData);
+            localStorage.setItem('favs', JSON.stringify(tempMoviesInFavs));
+            console.log('se agrego la pelicula a favs');
+        } else {
+            let moviesLeft = tempMoviesInFavs.filter(oneMovie => {
+                return oneMovie.id !== movieData.id
+            });
+            localStorage.setItem('favs', JSON.stringify(moviesLeft));
+            console.log('se elimino la pelicula');
+        }
     }
 
 
