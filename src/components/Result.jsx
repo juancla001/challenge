@@ -2,9 +2,13 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
 
 
 const Result = () => {
+    let token = sessionStorage.getItem('token');
+
     let query = new URLSearchParams(window.location.search);
     let keyword = query.get('keyword');
 
@@ -23,6 +27,8 @@ const Result = () => {
 
     return (
         <>
+            {!token && <Navigate replace to="/*" />}
+
             <div>Buscaste: <em>{keyword}</em> </div>
             {movieResult.length === 0 && <h3>No result</h3>}
             <div className="row">

@@ -9,11 +9,39 @@ import { Navigate } from 'react-router-dom';
 
 
 const List = (props) => {
-    console.log(props);
+    const favMovies = localStorage.getItem('favs');
+    let tempMoviesInFavs;
+    if (favMovies === null) {
+        tempMoviesInFavs = [];
+    } else {
+        tempMoviesInFavs = JSON.parse(favMovies)
+    }
+    console.log(tempMoviesInFavs);
+
+
+    const addOrRemoveFromFavs = (e) => {
+        const btn = e.currentTarget;
+        const parent = btn.parentElement;
+        const imgUrl = parent.querySelector('img').getAttribute('src')
+        const titleMovie = parent.querySelector('h5').innerText
+        const overviewMovie = parent.querySelector('p').innerText
+        const movieData = {
+            imgUrl, titleMovie, overviewMovie,
+            id: btn.dataset.movieId
+        }
+        tempMoviesInFavs.push(movieData);
+        console.log(tempMoviesInFavs)
+    }
+
+
 
     let token = sessionStorage.getItem('token');
 
+
+
     const [movieList, setMovieList] = useState([]);
+
+
 
 
     useEffect(() => {
@@ -40,7 +68,13 @@ const List = (props) => {
                             <div className="col-3" key={index}>
                                 <div className="card my-3">
                                     <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top" alt="..." />
-                                    <button className="favouriteBtn">🖤</button>
+                                    <button
+                                        className="favourite-btn"
+                                        onClick={addOrRemoveFromFavs}
+                                        data-movie-id={oneMovie.id}
+                                    >
+                                        🖤
+                                    </button>
                                     <div className="card-body">
                                         <h5 className="card-title">
                                             {oneMovie.title}
