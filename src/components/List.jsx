@@ -9,6 +9,7 @@ import { Navigate } from 'react-router-dom';
 
 
 const List = (props) => {
+
     const favMovies = localStorage.getItem('favs');
     let tempMoviesInFavs;
     if (favMovies === null) {
@@ -16,7 +17,6 @@ const List = (props) => {
     } else {
         tempMoviesInFavs = JSON.parse(favMovies)
     }
-    console.log(tempMoviesInFavs);
 
 
     const addOrRemoveFromFavs = (e) => {

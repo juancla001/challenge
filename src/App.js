@@ -6,6 +6,7 @@ import List from './components/List'
 import Detail from './components/Detail'
 import Result from './components/Result'
 import Header from './components/Header'
+import Favoritos from './components/Favoritos'
 //import Footer from './components/Footer'
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route exact path="/" element={<List />} />
           <Route path="/detail" element={<Detail />} />
           <Route path="/result" element={<Result />} />
+          <Route path="/favoritos" element={<Favoritos />} />
+
 
         </Routes>
 
